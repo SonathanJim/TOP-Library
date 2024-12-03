@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book.js</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- put the form etc. here -->
+
+    <script>
+        // create array for Library
+        const myLibrary = [];
+        
+        // Book constructor
+        function Book(title, author, pages, read) {
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+            this.read = read;
+            this.reportBook = function() {
+                return this.info();
+                console.log(this.info());
+            }
+        }
+
+        // function to add a new book
+        function addBookToLibrary(title, author, pages, read) {
+            const newBook = new Book(title, author, pages, read);
+            myLibrary.push(newBook);
+        }
+
+        //add test books
+        addBookToLibrary('Jobbies','Kevin',2000,true);
+        addBookToLibrary('Custard is thicker than Blood','Keith',174,true);
+
+
+        // function to loop through myLibrary array and display all the books on the page
+
+    </script>
+</body>
+</html>
