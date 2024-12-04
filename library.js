@@ -16,14 +16,14 @@ function Book(title, author, pages, read) {
 // select library container
 const container = document.getElementById('library')
 
-
+// function to populate cards for each book
 function displayBooks() {
     container.innerHTML = '';
     myLibrary.forEach((Book) => {
         const card = document.createElement("div")
         card.classList = "card"
 
-        
+        //construct content for card
         const content = 
             `<div class="card">
                 <h3>Title:</h3><p class="title">${Book.title}</p>
@@ -32,27 +32,10 @@ function displayBooks() {
                 <h3>Read?:</h3><p class="read">${(() => {if (Book.read === true) {return 'yes';} else {return 'no';};})()}</p>
             </div>`
             ;
-
+            //add card to container
             container.innerHTML += content;
     });
 };
-
-// function displayNewBook() {
-//     const book = myLibrary[myLibrary.length - 1];
-
-        
-//         const content = 
-//             `<div class="card">
-//                 <h3>Title:</h3><p class="title">${Book.title}</p>
-//                 <h3>Author:</h3><p class="author">${Book.author}</p>
-//                 <h3>Pages:</h3><p class="pages">${Book.pages}</p>
-//                 <h3>Read?:</h3><p class="read">${(() => {if (Book.read === true) {return 'yes';} else {return 'no';};})()}</p>
-//             </div>`
-//             ;
-
-//             container.innerHTML = content;
-//     });
-// };
 
 // function to add a new book
 function addBookToLibrary(title, author, pages, read) {
@@ -61,6 +44,7 @@ function addBookToLibrary(title, author, pages, read) {
     displayBooks();
 }
 
+//select modal and buttons
 const modal = document.querySelector('#modal');
 const openModal = document.querySelector('.open-button');
 const closeModal = document.querySelector('.close-button')
