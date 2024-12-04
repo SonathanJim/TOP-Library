@@ -8,36 +8,30 @@
 </head>
 <body>
 <!-- put the form etc. here -->
+    <div class="container">
+        <div class="header">
+            <H1>The Reading List</H1>
+        </div>
 
-    <script>
-        // create array for Library
-        const myLibrary = [];
-        
-        // Book constructor
-        function Book(title, author, pages, read) {
-            this.title = title;
-            this.author = author;
-            this.pages = pages;
-            this.read = read;
-            this.reportBook = function() {
-                return this.info();
-                console.log(this.info());
-            }
-        }
+        <div class="library" id="library">
+            <div class="card">
+                <h3>Title:</h3><p class="title">A Study In Scarlet</p>
+                <h3>Author:</h3><p class="author">Arthur Conan Doyle</p>
+                <h3>Pages:</h3><p class="pages">430</p>
+                <h3>Read?:</h3><p class="read">Yes</p>
+            </div>
+            <div class="card">
+                <h3>Title:</h3><p class="title">Of Human Bondage</p>
+                <h3>Author:</h3><p class="author">W. Somerset Maugham</p>
+                <h3>Pages:</h3><p class="pages">560</p>
+                <h3>Read?:</h3><p class="read">Yes</p>
+            </div>
+            
+        </div>
+    </div>
 
-        // function to add a new book
-        function addBookToLibrary(title, author, pages, read) {
-            const newBook = new Book(title, author, pages, read);
-            myLibrary.push(newBook);
-        }
+    
 
-        //add test books
-        addBookToLibrary('Jobbies','Kevin',2000,true);
-        addBookToLibrary('Custard is thicker than Blood','Keith',174,true);
-
-
-        // function to loop through myLibrary array and display all the books on the page
-
-    </script>
+    <script src="library.js"></script>
 </body>
 </html>
