@@ -16,7 +16,6 @@ body {
 
 .header {
     border: 1px, solid, red;
-    grid-row: 1 / 2;
     display: flex;
     justify-content: center;
 }
@@ -34,4 +33,28 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
+}
+
+.modal {
+    padding: 1em;
+    width: 50%;
+    height: 50%;
+}
+
+.modal::backdrop {
+    background-color: green;
+    opacity: .5;
+}
+
+form {
+    display: flex;
+}
+
+button {
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.open-button {
+    height: fit-content;
 }

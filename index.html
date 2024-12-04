@@ -11,10 +11,11 @@
     <div class="container">
         <div class="header">
             <H1>The Reading List</H1>
+            <button class="open-button">add new book</button>
         </div>
-
-        <div class="library" id="library">
-            <div class="card">
+            
+            <div class="library" id="library">
+                <div class="card">
                 <h3>Title:</h3><p class="title">A Study In Scarlet</p>
                 <h3>Author:</h3><p class="author">Arthur Conan Doyle</p>
                 <h3>Pages:</h3><p class="pages">430</p>
@@ -30,7 +31,21 @@
         </div>
     </div>
 
-    
+    <dialog class="modal" id="modal">
+        <button class="close-button">X</button>
+        <h2>Add a new book</h2>
+        <form>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+            <label for="pages">No. of pages</label>
+            <input type="number" name="pages" id="pages">
+            <label for="read">Read?</label>
+            <input type="checkbox" name="read" id="read">
+            <input type="submit" value="Submit">
+        </form>
+    </dialog>
 
     <script src="library.js"></script>
 </body>
