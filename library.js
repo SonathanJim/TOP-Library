@@ -8,8 +8,8 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
     this.reportBook = function() {
-        return this.info();
         console.log(this.info());
+        return this.info();
     }
 }
 
@@ -45,11 +45,13 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 //select modal and buttons
-const modal = document.querySelector('#modal');
+const modal = document.getElementById('modal');
 const openModal = document.querySelector('.open-button');
 const closeModal = document.querySelector('.close-button')
+const addBookForm = document.getElementById('addBookForm');
 
 openModal.addEventListener('click', () => {
+    addBookForm.reset();
     modal.showModal();
 })
 
@@ -58,5 +60,20 @@ closeModal.addEventListener('click', () => {
 })
 
 
+addBookForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let title = document.getElementById("title");
+    let author = document.getElementById("author");
+    let pages = document.getElementById("pages");
+    let read = document.getElementById("read");
+
+    if (title.value == '' || author.value == '') {
+        alert ('Please provide a title and author')
+    } else {
+        addBookToLibrary(title.value, author.value, pages.value, read.value);
+        modal.close;
+    }
+})
 
 
