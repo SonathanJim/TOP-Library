@@ -13,7 +13,6 @@ body {
 }
 
 .container {
-    color: rgb(0, 0, 0);
     margin: 5%;
     border: 2px, solid, rgb(255, 0, 0);
     display: grid;
@@ -40,10 +39,53 @@ body {
 
 .card {
     border: 1px, solid, red;
+}
+
+.card-content {
+    border: 1px, solid, red;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    color: black;
+    margin: 15px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.dropdown-button svg{
+    width: 30px;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown-menu {
+    display: none;
+    background-color: white;
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 15px;
+    box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.501);
+}
+
+.dropdown-button:hover +.dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: aquamarine;
 }
 
 .modal {
@@ -51,7 +93,7 @@ body {
     width: 50%;
     height: 50%;
     border: 0;
-    box-shadow: 0 0 1em(0 0 0 / .5);
+    box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.368);
 }
 
 .modal::backdrop {
