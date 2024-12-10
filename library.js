@@ -56,6 +56,8 @@ const modal = document.getElementById('modal');
 const openModal = document.querySelector('.open-button');
 const closeModal = document.querySelector('.close-button');
 const addBookForm = document.getElementById('addBookForm');
+const removeBook = document.getElementById('remove-book')
+const addNotes = document.getElementById('add-notes')
 
 openModal.addEventListener('click', () => {
     addBookForm.reset();
