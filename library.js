@@ -35,7 +35,7 @@ function displayBooks() {
                     <h3>Title:</h3><p class="title">${Book.title}</p>
                     <h3>Author:</h3><p class="author">${Book.author}</p>
                     <h3>Pages:</h3><p class="pages">${Book.pages}</p>
-                    <h3>Read?:</h3><p class="read">${(() => {if (Book.read === true) {return 'yes';} else {return 'no';};})()}</p>
+                    <h3>Read?:</h3><p class="read">${(() => {if (Book.read === 'on') {return 'yes';} else {return 'no';};})()}</p>
                 </div>
             </div>`
             ;
@@ -44,7 +44,7 @@ function displayBooks() {
     });
 };
 
-// function to add a new book
+// function to add a new book to myLibrary array
 function addBookToLibrary(title, author, pages, read) {
     const newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
@@ -59,6 +59,7 @@ const addBookForm = document.getElementById('addBookForm');
 const removeBook = document.getElementById('remove-book')
 const addNotes = document.getElementById('add-notes')
 
+//open & close Modal dialog
 openModal.addEventListener('click', () => {
     addBookForm.reset();
     modal.showModal();
@@ -68,6 +69,7 @@ closeModal.addEventListener('click', () => {
     modal.close();
 })
 
+//add book on submit click 
 addBookForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -83,3 +85,4 @@ addBookForm.addEventListener('submit', (e) => {
         modal.close();
     }
 })
+
