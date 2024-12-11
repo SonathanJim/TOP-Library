@@ -75,7 +75,7 @@ body {
     display: none;
     background-color: white;
     position: absolute;
-    margin-top: -5px;
+    margin-top: -15px;
     box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.501);
 }
 
